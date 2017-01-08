@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv='Content-type: text/html; charset=utf-8'>
+    <meta charset='utf-8'>
+    <style type='text/css'>
+    body {
+      font-family: gill sans, helvetica, arial, sans-serif;
+    }
+    table {
+      border-collapse: collapse;
+    }
+    td, th {
+      padding-right: 1em;
+    }
+    #songlist {
+      background: #eee;
+    }
+    #songlist tr:nth-child(odd) {
+      background: #ddd;
+    }
+    #songlist a {
+      color: #338;
+      text-decoration: none;
+    }
+    .number-column {
+      text-align: right;
+    }
+    </style>
+  </head>
+  <body>
+    <table id="songlist">
+      <tr>
+        <th>Artist
+        <th>Title
+        <th>BPM
+        <th>Notes
+      </tr>
+
+      {{#songs}}
+      <tr class="entry">
+        <td>{{.artist}}
+        <td><a href="{{.uri}}">{{.title}}</a>
+        <td class="number-column">{{.bpm}}
+        <td>{{#.notes}}{{.}}{{/.notes}}
+      </tr>
+      {{/songs}}
+
+    </table>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+[package]
+name = "find-tempo-rust-backend"
+version = "0.1.0"
+authors = ["Johannes Hoff <johshoff@gmail.com>"]
+
+[dependencies]
+bart = "*"
+bart_derive = "*"
+rustc-serialize = "*"
